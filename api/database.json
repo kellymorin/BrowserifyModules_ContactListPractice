@@ -1,0 +1,46 @@
+{
+  "contacts": [
+    {
+      "name": "Kelly Morin",
+      "phoneNumber": "6158389644",
+      "address": "9017, Chardonnay Trace",
+      "id": 1
+    },
+    {
+      "name": "Santa",
+      "phoneNumber": "jingle bells",
+      "address": "the north pole",
+      "id": 14
+    },
+    {
+      "name": "Easter Bunny",
+      "phoneNumber": "Carrots",
+      "address": "Candy Way",
+      "id": 16
+    },
+    {
+      "name": "Sebastian",
+      "phoneNumber": "Shell Phone",
+      "address": "Sea Lane",
+      "id": 21
+    },
+    {
+      "name": "Austin",
+      "phoneNumber": "Some Number",
+      "address": "2138 some street",
+      "id": 22
+    },
+    {
+      "name": "Kelly Morin",
+      "phoneNumber": "6158389644",
+      "address": "9017, Chardonnay Trace",
+      "id": 23
+    },
+    {
+      "name": "Kelly Morin",
+      "phoneNumber": "6158389644",
+      "address": "9017, Chardonnay Trace",
+      "id": 24
+    }
+  ]
+}
