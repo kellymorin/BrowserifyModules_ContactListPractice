@@ -12,7 +12,12 @@ const contactForm = {
       let contactObj = {}
       contactObj.name = document.querySelector("#name").value
       contactObj.phoneNumber = document.querySelector("#phoneNumber").value
-      contactObj.address = document.querySelector("#address").value
+      let streetAddress = document.querySelector("#address").value
+      let cityAddress = document.querySelector("#city").value
+      let zipAddress = document.querySelector("#zip").value
+      let stateAddress = document.querySelector("#state").value
+      contactObj.address = `${streetAddress}, ${cityAddress}, ${stateAddress} ${zipAddress}`
+      console.log(contactObj)
       database.saveData(contactObj)
       contactForm.clearForm();
     } else {
@@ -23,9 +28,15 @@ const contactForm = {
     let name = document.querySelector("#name")
     let phoneNumber = document.querySelector("#phoneNumber")
     let address = document.querySelector("#address")
+    let cityAddress = document.querySelector("#city")
+    let zipAddress = document.querySelector("#zip")
+    let stateAddress = document.querySelector("#state")
     name.value = ""
     phoneNumber.value = ""
     address.value = ""
+    cityAddress.value = ""
+    zipAddress.value = ""
+    stateAddress.value = ""
   }
 }
 export default contactForm

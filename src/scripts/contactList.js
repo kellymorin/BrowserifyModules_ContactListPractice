@@ -1,6 +1,7 @@
 /*A ContactList component that displays all contacts. It should import the Contact component and the ContactCollection component.*/
 
 import contact from "./contact";
+import database from "./contactCollection";
 
 
 const contactList = {
@@ -19,6 +20,7 @@ const contactList = {
     let deleteCard = document.querySelector(`#contactCardDiv-${id}`)
     let displayContact = document.querySelector("#displayContact")
     displayContact.removeChild(deleteCard)
+    database.deleteData(id);
   }
 }
 export default contactList

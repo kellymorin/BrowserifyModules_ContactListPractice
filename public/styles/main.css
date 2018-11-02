@@ -1,0 +1,46 @@
+#contactEntryForm{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid darkcyan;
+  border-radius: 15px;
+  padding: 20px;
+  align-items: baseline;
+  font-size: 1.25em;
+}
+#contactEntryForm div{
+  padding: 5px 0 5px 0;
+}
+#contactEntryForm h3{
+  margin: 0;
+}
+#contactEntryForm div label{
+  padding: 10px;
+}
+#addressEntry{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px;
+  justify-content: space-between;
+}
+#submitButton{
+  font-size: 14px;
+}
+#displayContact{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-around;
+  align-content: space-around;
+}
+#displayContact div{
+  border: 1px solid darkcyan;
+  border-radius: 15px;
+  width: 25%;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
+  background-color: lightcyan;
+}
