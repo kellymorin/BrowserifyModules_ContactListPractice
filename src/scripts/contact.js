@@ -3,6 +3,7 @@ A Contact component that displays a person's name, phone number, and address.
 */
 import contactList from "./contactList"
 import makeElement from "./elementFactory"
+import database from "./contactCollection";
 
 const contact = {
   makeContact: (something) =>{
@@ -11,8 +12,12 @@ const contact = {
     let phoneNumber = makeElement.elementFactory("p", {id: "contactCardPhone"}, something.phoneNumber)
     let address = makeElement.elementFactory("p", {id: "contactCardAddress"}, something.address)
     let deleteButton = makeElement.elementFactory("input", {type: "button", id: `deleteButton-${something.id}`, value: "Delete Contact Information"}, null)
+    deleteButton.addEventListener("click", ()=>{
+      let eventID = event.target.id.substring(13, 15)
+      contactList.deleteListItem(eventID)
+      database.deleteData(eventID)
+    })
     let cardDiv = makeElement.elementFactory("div", {id: `contactCardDiv-${something.id}`}, null, title, name, phoneNumber, address, deleteButton)
-    contact.deleteButton()
     return cardDiv
   },
 
@@ -21,14 +26,5 @@ const contact = {
       fragment.appendChild(contact.makeContact(contactInfo));
       contactList.addToList(fragment)
     },
-
-  deleteButton: () => {
-    let button = document.querySelectorAll("button")
-    button.forEach((button)=> {
-      let buttonID = button.id
-      // .substring(12, 15)
-      console.log(buttonID)
-    })
-  }
 }
 export default contact

@@ -10,20 +10,15 @@ const contactList = {
       originalFragment.appendChild(contact.makeContact(entry))
     })
     contactList.addToList(originalFragment)
-    // let deleteButton= document.querySelector("#deleteButton")
-    // console.log(deleteButton)
-    // deleteButton.addEventListener("click", (selectedButton)=>{
-    //   ID = selectedButton.target.id.substring(12,30);
-    //   console.log(ID)
-    // })
   },
   addToList (finalFragment){
     let displayContact = document.querySelector("#displayContact")
     displayContact.appendChild(finalFragment)
-    // deleteButton.addEventListener("click", (selectedButton)=>{
-    //   ID = selectedButton.target.id.substring(12,30);
-    //   console.log(ID)
-    // })
   },
+  deleteListItem(id){
+    let deleteCard = document.querySelector(`#contactCardDiv-${id}`)
+    let displayContact = document.querySelector("#displayContact")
+    displayContact.removeChild(deleteCard)
+  }
 }
 export default contactList

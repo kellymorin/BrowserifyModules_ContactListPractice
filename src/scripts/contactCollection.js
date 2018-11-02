@@ -24,7 +24,10 @@ const database = {
   },
 
   deleteData: (id) => {
-    return fetch(`http://localhost:8088/${id}`)
+    return fetch(`http://localhost:8088/contacts/${id}`,{
+      method: "DELETE"
+    })
+    .then(alert("Your contact information was deleted"))
   }
 }
 export default database
